@@ -16,7 +16,10 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: "https://ecom-frontend-3tlvtvmy2-salmans-projects-38c84261.vercel.app",
+  credentials: true
+}))
 
 // api endpoints
 app.use('/api/user',userRouter)
